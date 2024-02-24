@@ -1,0 +1,27 @@
+extend ../main.pug
+
+append content
+    main
+    .container__top
+        h2 PRODUCTS
+    mixin productItem(imageSrc, productName, starRating, price)
+        .category-right-content-item
+            img.home-product-item__img(src=imageSrc)
+            h1.home-product-item__name= productName
+            li.home-product-item__icon
+                each star in starRating
+                    i.fa-solid.fa-star
+            p.home-product-item__price= price
+
+    section.category
+        .row
+            .category-right.row
+                .category-right-content.row
+                    +productItem('images/product1.jpg', 'Adidas NMD R1 Grey', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product2.jpg', 'Balenciaga Triple S Trainer', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product3.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product4.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product5.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product6.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product7.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')
+                    +productItem('images/product8.jpg', 'Adidas Alphabounce', [1, 1, 1, 1, 1], '100$')

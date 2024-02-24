@@ -1,0 +1,21 @@
+extend ../main.pug 
+
+append content
+    main.form-content
+        .wrapper
+            form#form-login(action='')
+            h1 Login
+            .input-box
+                input#username(type='text' placeholder='Username' required='')
+            .input-box
+                input#password(type='password' placeholder='Password' required='')
+            .remember-forgot
+                label
+                input(type='checkbox')
+                | Remember me
+                a(href='') Forgot password?
+            button.form-submit(onclick='login()' type='submit') Login
+            .register-link
+                p
+                | Don't have an account? 
+                a(href='') Register

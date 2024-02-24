@@ -1,0 +1,71 @@
+header{
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
+.header__info{
+    padding-top: 0.625rem;
+    text-align: center;
+    text-indent: 1.25rem;
+}
+.header__center{
+    display: flex;
+    margin-top: 0.625rem;
+    text-align: center;
+}
+.header__logo{
+    margin: 0.625rem 0rem 1.25rem 1.25rem;
+}
+.header__logo img{
+    width: 15.625rem;
+}
+.search-text{
+    width: 31.25rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 0.625rem;
+    font-style: italic;
+    height: 100%;
+}
+.search-box{
+    height: 2.813rem;
+    margin: 1.875rem 0 0 6.25rem;;
+}
+
+.header-login-register-cart{
+    padding: 2.813rem;
+    margin-left: 0rem;
+    display: flex;
+}
+.header-login-register-cart a{
+    color:white;
+    font-size: 0.938rem;
+    text-transform: uppercase;
+    margin-right: 0.938rem;
+
+}
+
+.header-login-register-cart a:hover{
+    font-weight: bold;
+}
+.header__nav ul {
+    background-color: white;
+    padding: 0.313rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    line-height: 3.125rem;
+    text-indent: 3.125rem;
+}
+.header__nav a {
+    color: #333;
+    font-size: 0.938rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.header__nav a:hover{
+    color:red;
+    font-weight: bold;
+    cursor: pointer;
+}

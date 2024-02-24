@@ -1,0 +1,64 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.85);
+}
+a{
+    text-decoration: none;
+}
+.page-title {
+    margin: 0.625rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0.313rem 0.313rem 0.625rem black;
+    line-height: 3.75rem;
+    font-weight: bold;
+    font-size: 1.875rem;
+}
+.page-title {
+    text-transform: uppercase;
+}
+
+.table-brand{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-collapse: collapse;
+    overflow-y: auto;
+}
+.table-brand{
+    padding-top: 0.625rem;
+    padding-right: 3.125rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.125rem;
+}
+thead,tr,tbody{
+    display: contents;
+}
+
+table,td,th{
+    margin: initial;
+    padding: initial;
+}
+
+th, td {
+    text-align: center;
+    padding: 0.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+th{
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+tr:nth-child(odd) td {
+    background: rgb(255, 255, 255)
+}
+tr:nth-child(even) td {
+    background: rgb(218, 218, 218)
+}
