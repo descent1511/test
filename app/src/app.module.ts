@@ -10,7 +10,7 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
   providers: [AppService,{
     provide: APP_INTERCEPTOR,
     useClass: TimingInterceptor,
-  },
+  }
 ],
 })
 export class AppModule {}

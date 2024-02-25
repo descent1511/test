@@ -9,12 +9,12 @@ export class AppController {
   @Get('/')
   @Render('content/index')
   getIndex() {
-    return { tittle: 'Index page!' };
+    return {tittle: 'Index page!'  };
   }
   @Get('brand')
   @Render('content/brand')
   getBrand() {
-    return { tittle: 'Brand page!' };
+    return {tittle: 'Brand page!' };
   }
    
   @Get('size')
@@ -31,8 +31,9 @@ export class AppController {
   @Get('login')
   @Render('content/login')
   getLogin() {
-    return { tittle: 'Login page!' };
+    return {tittle: 'Login page!' };
   }
+  
 }
 
 

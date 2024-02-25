@@ -1,25 +1,32 @@
-function login() {
-    const user = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+function login() { 
+    const user = document.getElementById('username').value; 
+    const password = document.getElementById('password').value; 
+ 
+    if (user !== "" && password !== "") { 
+        sessionStorage.setItem('loggedInUser', user); 
+        updateLogin();
+    } 
+ 
+    return false;   
+} 
 
-    if (user !== "" && password !== "") {
-        // Sử dụng Cookies thay vì sessionStorage
-        document.cookie = `loggedInUser=${user}; path=/`;
+function logout() { 
+    sessionStorage.removeItem('loggedInUser'); 
+    updateLogin(); 
+}
 
-        // Cập nhật giao diện
-        document.getElementById('header-login').innerHTML = `
-        <a href="/login">Logged in as: ${user}</a>
-        <a onclick="logout()">Logout</a>
+function updateLogin() {
+    const loggedInUser = sessionStorage.getItem('loggedInUser');
+    const headerLoginElement = document.getElementById('header-login');
+    
+    if (loggedInUser) {
+        headerLoginElement.innerHTML = `
+            <a href="/login">Logged in as: ${loggedInUser}</a>
+            <a onclick="logout()">Logout</a>
         `;
+    } else {
+        headerLoginElement.innerHTML = '<a href="/login">Login</a>';
     }
-
-    return false;
 }
 
-function logout() {
-    // Xóa Cookies
-    document.cookie = 'loggedInUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-
-    // Cập nhật giao diện
-    document.getElementById('header-login').innerHTML = '<a href="/login">Login</a>';
-}
+updateLogin();
